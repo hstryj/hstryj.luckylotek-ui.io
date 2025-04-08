@@ -21,7 +21,21 @@ export default function ResultView({ numbers, onSave, strategy }) {
           <Chip
             key={i}
             label={n}
-            sx={{ backgroundColor: "#FEF08A", fontWeight: 600 }}
+            sx={{  width: 60,
+              height: 60,
+              borderRadius: "50%",
+              backgroundColor: "#e8fc03",
+              fontWeight: 700,
+              fontSize: "1.25rem",
+              color: "#000",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 2px 5px rgba(0,0,0,0.2)", 
+              animation: "shake 0.4s ease-in-out",
+              "&:hover": {
+                animation: "bounce 0.3s ease-in-out",
+              },}}
           />
         ))}
       </Stack>

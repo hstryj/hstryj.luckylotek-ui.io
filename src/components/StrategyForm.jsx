@@ -21,7 +21,7 @@ export default function StrategyForm({ setResult, setStrategy }) {
   };
 
   return (
-    <Paper elevation={3} sx={{ p: 3, mt: 3 }}>
+    <Paper elevation={3} sx={{ p: 3, mt: 3}}>
       <Typography variant="h6" gutterBottom>
         Wybierz strategię
       </Typography>

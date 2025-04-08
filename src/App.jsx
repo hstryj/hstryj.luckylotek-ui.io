@@ -32,15 +32,25 @@ export default function App() {
   }
 
   return (
-    <Box>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #175F36, #0F3C26)", // głęboka, żelowa zieleń
+        paddingBottom: 4,
+        maxWidth: "700px",
+        margin: "0 auto",
+        padding: "2rem 1rem"
+      }}
+    >
+  
+      <Toolbar>
+          <Typography variant="h2" align="center" sx={{ flexGrow: 1 }}>
             Dobry Lotek
           </Typography>
-        </Toolbar>
-      </AppBar>
-
+          </Toolbar>
+       
+    
+      <Typography variant="h1">
       <Tabs
         value={tabIndex}
         onChange={handleTabChange}
@@ -48,10 +58,13 @@ export default function App() {
         textColor="inherit"
         centered
       >
+         
         <Tab label="Generator" />
         <Tab label="Zapisane" />
         <Tab label="Analiza" />
+       
       </Tabs>
+      </Typography>
 
       <Container sx={{ mt: 4 }}>
         {tabIndex === 0 && (

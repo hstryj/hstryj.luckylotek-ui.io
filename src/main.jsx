@@ -1,17 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import "./App.css";
 
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-
-const theme = createTheme({
-  palette: {
-    mode: "light",
-    primary: { main: "#1976d2" },
-    secondary: { main: "#ff9800" },
-  },
-});
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import { theme } from "./styles/theme";
+import "@fontsource/raleway/400.css";
+import "@fontsource/raleway/700.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
