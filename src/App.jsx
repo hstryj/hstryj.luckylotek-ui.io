@@ -55,7 +55,6 @@ export default function App() {
         value={tabIndex}
         onChange={handleTabChange}
         indicatorColor="primary"
-        textColor="inherit"
         centered
       >
          

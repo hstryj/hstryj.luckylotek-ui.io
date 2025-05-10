@@ -18,6 +18,7 @@ export const theme = createTheme({
     h1: {
       fontWeight: 700,
       color: "#d9d914",
+      fontSize: "3rem"
     },
     h2: {
       fontWeight: 600,
@@ -91,12 +92,12 @@ export const theme = createTheme({
           color: "#fff",
           textTransform: "uppercase",
           boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
-          fontSize: "1.5rem",
+          fontSize: "1.2rem",
           '&:hover': {
             background: "linear-gradient(to right, #9bcf3f, #357c1e)",
             borderRadius: "999px",
             padding: "0.75rem 1.5rem",
-            fontSize: "1.6rem",
+            fontSize: "1.3rem",
           },
         },
       },

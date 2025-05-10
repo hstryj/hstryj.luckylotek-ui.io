@@ -36,8 +36,13 @@ export default function SavedList({ reload }) {
 
   return (
     <Box mt={6}>
-      <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-        <Typography variant="h6">Zapisane zestawy</Typography>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        mb={2}
+      >
+        <Typography variant="h4">Zapisane zestawy</Typography>
         {saved.length > 0 && (
           <Button size="small" color="error" onClick={handleClearAll}>
             Wyczyść wszystkie
@@ -51,30 +56,43 @@ export default function SavedList({ reload }) {
         <Stack spacing={2}>
           {saved.map((item, index) => (
             <Paper key={index} elevation={2} sx={{ p: 2 }}>
-              <Box display="flex" alignItems="center" gap={1} flexWrap="wrap" mb={1}>
+              <Box
+                display="flex"
+                alignItems="center"
+                gap={1}
+                flexWrap="wrap"
+                mb={1}
+              >
                 <Typography fontWeight={600} color="text.secondary">
                   {index + 1}.
                 </Typography>
                 {item.set.map((n, i) => (
-                   <Chip
-                              key={i}
-                              label={n}
-                              sx={{  width: 60,
-                                height: 60,
-                                borderRadius: "50%",
-                                backgroundColor: "#e8fc03",
-                                fontWeight: 700,
-                                fontSize: "1.25rem",
-                                color: "#000",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                boxShadow: "0 2px 5px rgba(0,0,0,0.2)", }}
-                            />
+                  <Chip
+                    key={i}
+                    label={n}
+                    sx={{
+                      width: 60,
+                      height: 60,
+                      borderRadius: "50%",
+                      backgroundColor: "#e8fc03",
+                      fontWeight: 700,
+                      fontSize: "1.25rem",
+                      color: "#000",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+                    }}
+                  />
                 ))}
               </Box>
               {item.strategy && (
-                <Typography variant="body2" color="primary" fontStyle="italic" mb={0.5}>
+                <Typography
+                  variant="body2"
+                  color="primary"
+                  fontStyle="italic"
+                  mb={0.5}
+                >
                   Strategia: {item.strategy}
                 </Typography>
               )}
