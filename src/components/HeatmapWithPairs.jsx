@@ -3,10 +3,8 @@ import {
   Box,
   Typography,
   Paper,
-  Chip,
   Grid,
   Tooltip,
-  Stack,
 } from "@mui/material";
 import { getHeatColor } from "../utils/colors";
 import { getFavoritePairs } from "../utils/drawsAnalyzer";
@@ -30,13 +28,19 @@ export default function HeatmapWithPairs({ draws }) {
 
   return (
     <Box mt={6}>
-      <Typography variant="h6" mb={2}>
+      <Typography variant="h6" mb={3} textAlign="center">
         Mapa Ciepła Liczb + Najczęstsze Pary
       </Typography>
 
-      <Grid container spacing={1} sx={{ maxWidth: 350 }}>
+      <Grid
+        container
+        spacing={1}
+        columns={7}
+        justifyContent="center"
+        sx={{ maxWidth: "fit-content", mx: "auto" }}
+      >
         {numbers.map((n) => (
-          <Grid item xs={12 / 7} key={n}>
+          <Grid item xs={1} key={n}>
             <Tooltip title={`Liczba ${n} wystąpiła ${countMap[n] || 0} razy`} arrow>
               <Paper
                 elevation={selectedNumber === n ? 4 : 1}
@@ -64,17 +68,23 @@ export default function HeatmapWithPairs({ draws }) {
         ))}
       </Grid>
 
-      <Typography variant="body2" color="text.secondary" fontStyle="italic" mt={2}>
+      <Typography
+        variant="body2"
+        color="text.secondary"
+        fontStyle="italic"
+        mt={2}
+        textAlign="center"
+      >
         Liczba pod numerem to częstotliwość jej występowania w losowaniach.
         Najedź na dowolną liczbę, aby zobaczyć szczegóły.
       </Typography>
 
       {selectedNumber && favoritePairs.length > 0 && (
-        <Box mt={4}>
+        <Box mt={4} textAlign="center">
           <Typography variant="subtitle1" fontWeight={600} mb={1}>
             Najczęstsze pary z liczbą {selectedNumber}:
           </Typography>
-          <ul style={{ paddingLeft: "1.25rem", fontSize: "0.875rem" }}>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {favoritePairs.slice(0, 5).map(([num, count], i) => (
               <li key={i}>
                 {selectedNumber} + {num} → {count} razy
