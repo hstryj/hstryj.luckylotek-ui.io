@@ -40,7 +40,7 @@ export default function HeatmapWithPairs({ draws }) {
         sx={{ maxWidth: "fit-content", mx: "auto" }}
       >
         {numbers.map((n) => (
-          <Grid item xs={1} key={n}>
+          <Grid item xs={1} key={n} display="flex" justifyContent="center">
             <Tooltip title={`Liczba ${n} wystąpiła ${countMap[n] || 0} razy`} arrow>
               <Paper
                 elevation={selectedNumber === n ? 4 : 1}
