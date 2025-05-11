@@ -37,7 +37,7 @@ export default function HeatmapWithPairs({ draws }) {
         mb={4}
         sx={{ color: "white" }}
       >
-        Mapa Ciepła Liczb
+        Mapa Ciepła Liczb + Najczęstsze Pary
       </Typography>
 
       <Box
